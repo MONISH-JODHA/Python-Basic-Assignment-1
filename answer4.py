@@ -26,7 +26,10 @@ def updgrade(pkg_name=None):
             subprocess.run(["sudo", "apt", "install", "--only-upgrade", pkg_name], check=True)
             print(f"Package '{pkg_name}' upgraded successfully.")
         else:
+            subprocess.run(["sudo", "apt", "update"], check=True)
             subprocess.run(["sudo", "apt", "upgrade"], check=True)
+
+            
             print("All packages upgraded successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error upgrading packages: {e}")
