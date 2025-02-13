@@ -48,5 +48,4 @@ def main():
             except ValueError:
                 print("Please enter a valid package number.")       
                 
-if __name__=="__main__":
-    main()
+main()
