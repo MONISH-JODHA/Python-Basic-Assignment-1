@@ -16,9 +16,13 @@ if len(ipv4)==4 and all(i.isdigit() for i in ipv4):
 checkmail="~! $%^&*_=+}{'?-."
 checkmail=list(checkmail)           
 if mail.endswith("@gmail.com"):
-    if checkmail[0] in mail:
-        print("invalid mail")
-    elif mail.split('@')[0].isalnum:
-        print("invalid mail")
-    else:
-        print("Valid Gmail address.")
+    for i in range (len(checkmail)):
+        if checkmail[i] in mail:
+            print("invalid mail")
+            break
+    if mail.split('@')[0].isalnum():
+        print(mail.split('@')[0])
+        print("invalid mail1")
+else:
+    print("Valid Gmail address.")
+        
