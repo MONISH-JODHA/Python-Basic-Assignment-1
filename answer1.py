@@ -1,5 +1,4 @@
 ip=input("Enter IPV4:")
-mail=input("Enter mail:")
 
 ipv4=ip.split('.')
 if len(ipv4)==4 and all(i.isdigit() for i in ipv4):
@@ -13,16 +12,27 @@ if len(ipv4)==4 and all(i.isdigit() for i in ipv4):
     else:
         print("Not a IPv4 address.")
 
-checkmail="~! $%^&*_=+}{'?-."
-checkmail=list(checkmail)           
+
+mail = input("Enter mail:")
+
+checkmail = "~! $%^&*_=+}{'?-"
+checkmail = list(checkmail)           
+
 if mail.endswith("@gmail.com"):
-    for i in range (len(checkmail)):
-        if checkmail[i] in mail:
-            print("invalid mail")
-            break
-    if mail.split('@')[0].isalnum():
-        print(mail.split('@')[0])
-        print("invalid mail1")
+    if len(mail)>8:
+        for i in range(len(checkmail)):
+            if checkmail[i] in mail:
+                print("invalid mail")
+                print(f"Invalid character found: {checkmail[i]}")
+                break
+        else:
+            if mail.split('@')[0].isdigit():  
+                print("invalid mail")
+            else:
+                print("Valid Gmail address.")
+                
+    else:
+        print("Not a Gmail address.")
+
 else:
-    print("Valid Gmail address.")
-        
+    print("Not a Gmail address.")
