@@ -1,0 +1,6 @@
+Order ID,Customer Name,Product Name,Product Price,Quantity,Total Value,Discount,Shipping Cost,Final Total,Shipping Address,Country Code
+O001,John Doe,Laptop,999.99,1,1051.97,105.197,15,961.773,"123 Main St, Springfield, IL",US
+O001,John Doe,Mouse,25.99,2,1051.97,105.197,15,961.773,"123 Main St, Springfield, IL",US
+O002,Jane Smith,Phone,599.99,1,599.99,59.999,5,544.991,"456 Oak St, Seattle, WA",US
+O003,John Doe,Headphones,149.99,1,249.98000000000002,24.998000000000005,10,234.98200000000003,"123 Main St, Springfield, IL",US
+O003,John Doe,Keyboard,99.99,1,249.98000000000002,24.998000000000005,10,234.98200000000003,"123 Main St, Springfield, IL",US
